@@ -3,7 +3,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Used stack
 
 * React
-* Redux
+* redux
+* React-redux
+* React hooks
+* Sass
 
 
 ## Available Scripts
