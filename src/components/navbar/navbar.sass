@@ -1,0 +1,57 @@
+@import '../app/app';
+
+.navbar
+    color: $primary-text
+    flex: 1
+    background-color: $light-primary
+    border-radius: .4em
+    padding: 1.5em
+    &__price-input
+        color: $secondary-text
+        border-radius: .1em
+        padding: .3em .5em
+        border: none
+        max-width: 55px
+        margin-left: 0.4em
+    &__price-input-group
+        display: inline-flex
+        juatify-content: center
+        flex-direction: column
+        align-items: flex-start
+        // max-width: 322px
+    &__price-input-wrap
+        margin-left: 0.5em
+    &__price-btn
+        font-weight: 500
+        position: relative
+        cursor: pointer
+        &::after
+            margin-top: .3em
+            margin-left: .2em
+            content: ''
+            position: absolute
+            border: 7px solid transparent
+            border-top: 7px solid $accent-color
+    &__price-items
+        border-radius: .2em
+        padding: 0
+        list-style-type: none
+        border: 1px solid $accent-color
+        border-bottom: none
+        background-color: $light-primary
+        position: absolute
+        margin-top: 2em
+    &__price-item
+        cursor: pointer
+        padding: .6em .8em
+        border-bottom: 1px solid $accent-color
+        &:hover
+            background-color: $primary
+
+.price-item-active
+    background-color: $dark-primary
+            
+            
+
+            
+
