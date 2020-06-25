@@ -2,12 +2,23 @@ import React from 'react';
 import './books-page-item.sass';
 import { connect } from 'react-redux';
 import { bookAddedToCart } from '../../actions';
+import { NavLink } from 'react-router-dom';
 
 const BooksPageItem = (props) => {
   const { id, coverImage, title, author, price } = props.book;
 
   const onBookAdded = () => {
-    return props.bookAddedToCart(id);
+    props.bookAddedToCart(id);
+  };
+
+  const bookInCart = () => {
+    return props.cartItems.findIndex((item) => item.id === id) > -1 ? (
+      <NavLink to="/cart">
+        <div>В корзине</div>
+      </NavLink>
+    ) : (
+      'Купить'
+    );
   };
 
   return (
@@ -20,8 +31,8 @@ const BooksPageItem = (props) => {
         </div>
         <div className="book-label-bottom">
           <div className="book-label-bottom__price">{price} руб.</div>
-          <button onClick={onBookAdded} className="book-label-bottom__btn">
-            Купить
+          <button onClick={onBookAdded} className={`book-label-bottom__btn`}>
+            {bookInCart()}
           </button>
         </div>
       </div>
@@ -29,8 +40,12 @@ const BooksPageItem = (props) => {
   );
 };
 
+const mapStateToProps = ({ cartItems }) => {
+  return { cartItems };
+};
+
 const mapDispatchToProps = {
   bookAddedToCart,
 };
 
-export default connect(null, mapDispatchToProps)(BooksPageItem);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksPageItem);

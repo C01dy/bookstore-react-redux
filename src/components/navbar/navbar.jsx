@@ -49,6 +49,14 @@ const Navbar = ({ filteredBooksPrice }) => {
     return null;
   };
 
+  const rotateArrow = () => {
+    if (visiblePopup) {
+      return {
+        transform: "rotate(180deg)"
+      }
+    }
+  }
+
   useEffect(() => {
     document.body.addEventListener('click', handleOutClick);
   }, []);
@@ -59,7 +67,7 @@ const Navbar = ({ filteredBooksPrice }) => {
         <div>
           <div ref={sortRef} className="navbar__price-input-group">
             <span onClick={toggleVisiblePopup} className="navbar__price-btn">
-              Сортировать
+              Сортировать <i class="fas fa-chevron-down popup-arrow" style={rotateArrow()}></i>
             </span>
             {renderPopup()}
           </div>

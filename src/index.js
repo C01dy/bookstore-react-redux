@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import BookstoreService from './services/bookstore-service';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import { BrowserRouter } from 'react-router-dom';
 
 export const bookstoreServiceContext = React.createContext();
 const bookstoreService = new BookstoreService();
@@ -15,7 +16,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <bookstoreServiceContext.Provider value={bookstoreService}>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </bookstoreServiceContext.Provider>
     </Provider>
   </React.StrictMode>,

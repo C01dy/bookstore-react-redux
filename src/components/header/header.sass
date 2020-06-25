@@ -3,12 +3,28 @@
 .header
     background-color: $dark-primary
     padding: 1em
+    box-shadow: 0 2px  4px 0 rgba(0,0,0,.3)
     &__content
         display: flex
-        justify-content: flex-start
+        justify-content: space-between
+        align-items: center
     &__logo
         font-family: $noto-font
         font-size: 30px
         font-weight: 600
         color: $text-icons-color
-    
+        &:hover
+            color: $accent-color
+    &__cart-link
+        display: flex
+        align-items: center
+        color: $text-icons-color
+        &:hover
+            color: $accent-color
+
+
+.cart-icon
+    font-size: 2em 
+.cart-total
+    margin-right: 1em
+    margin-top: 0.5em

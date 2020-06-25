@@ -12,7 +12,7 @@ const BooksPage = (props) => {
       <RenderChecker isLoading={isLoading} hasError={error}>
         <div className="books-page__items">
           {filterPrice(filterPriceType, books).map((book) => (
-            <BooksPageItem key={book.id} book={book} />
+            <BooksPageItem key={book.id} book={book} inCart={book.inCart}/>
           ))}
         </div>
       </RenderChecker>

@@ -7,7 +7,7 @@ export default class BookstoreService {
             price: 153,
             country: 'foreign literature',
             coverImage: "2412538_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 54,
@@ -16,7 +16,7 @@ export default class BookstoreService {
             price: 237,
             country: 'foreign literature',
             coverImage: "2622192_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 36,
@@ -25,7 +25,7 @@ export default class BookstoreService {
             price: 127,
             country: 'foreign literature',
             coverImage: "2612850_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 39,
@@ -34,7 +34,7 @@ export default class BookstoreService {
             price: 178,
             country: 'foreign literature',
             coverImage: "2596266_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 47,
@@ -43,7 +43,7 @@ export default class BookstoreService {
             price: 133,
             country: 'russian literature',
             coverImage: "2667182_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 55,
@@ -52,7 +52,7 @@ export default class BookstoreService {
             price: 129,
             country: 'foreign literature',
             coverImage: "2450235_detail.jpg",
-            count: 1
+            count: 1,
         },
         {
             id: 64,
@@ -61,7 +61,7 @@ export default class BookstoreService {
             price: 192,
             country: 'foreign literature',
             coverImage: "2421138_detail.jpg",
-            count: 1
+            count: 1,
         },
     ]
 
