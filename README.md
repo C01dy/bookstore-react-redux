@@ -1,16 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## About project
-Online bookstore with small functionality :blush:
+Online bookstore with basic functionality :book:
 
 ## Used stack
-
+### UI
 * React
-* redux
+* Sass
+### State management
+* Redux
 * React-redux
 * React hooks
-* Sass
-
+### Also
+* Promises to simulate server requests
 
 ## Available Scripts
 In the project directory, you can run:
