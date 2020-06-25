@@ -17,7 +17,6 @@ Online bookstore with basic functionality :book:
 ## Available Scripts
 In the project directory, you can run:
 ### `npm start`
-![ScreenShot](\public\2421138_detail.jpg)
 
 
 
