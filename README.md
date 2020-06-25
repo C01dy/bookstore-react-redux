@@ -11,6 +11,8 @@ Online bookstore with basic functionality :book:
 * Redux
 * React-redux
 * React hooks
+### Also
+* Promises to simulate server requests
 
 ## Available Scripts
 In the project directory, you can run:
