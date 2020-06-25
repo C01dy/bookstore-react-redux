@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## About project
-A simple application that allows you to browse and search information about various beer :beer:
+Online bookstore with basic functionality :book:
 
 ## Used stack
 ### UI
