@@ -7,13 +7,10 @@ A simple application that allows you to browse and search information about vari
 ### UI
 * React
 * Sass
-
-* React
-* redux
+### State management
+* Redux
 * React-redux
 * React hooks
-* Sass
-
 
 ## Available Scripts
 In the project directory, you can run:
