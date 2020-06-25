@@ -1,0 +1,61 @@
+@import '../app/app';
+
+$border-props: 3px solid $primary
+
+.cart
+    border-collapse: collapse
+    border-left: $border-props
+    border-right: $border-props
+    border-bottom: $border-props
+    font-family: "Lucida Grande", sans-serif
+    caption 
+        background: $dark-primary
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        padding: 10px
+        box-shadow: 0 2px  4px 0 rgba(0,0,0,.3)
+        color: white
+        font-family: $fira-font
+        font-weight: 500
+        font-style: normal
+        font-size: 26px
+        text-align: start
+        margin: 0
+	
+    td, th 
+        padding: 10px
+        font-family: $noto-font
+	
+    th 
+        text-align: left
+        font-size: 18px
+	
+    tr:nth-child(2n) 
+        background: $light-primary
+	
+    a 
+        display: inline-block
+        padding: 5px 10px
+        background: $accent-color
+        box-shadow: 2px 2px 0 0 #a22800
+        position: relative
+        &:hover 
+            box-shadow: none
+            top: 2px
+            left: 2px
+.cart__btn
+    cursor: pointer
+
+.cart__btn + .cart__btn
+    margin: 0 .4em
+
+.inc-item-btn
+    color: green
+.dec-item-btn
+    color: $accent-color
+.del-item-btn
+    color: crimson
+
+
+		
+	

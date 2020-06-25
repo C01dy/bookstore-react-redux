@@ -1,9 +1,9 @@
 @import '../app/app';
 
 .navbar
-    color: $primary-text
+    color: $text-icons-color
     flex: 1
-    background-color: $light-primary
+    background-color: $primary
     border-radius: .4em
     padding: 1.5em
     &__price-input
@@ -33,12 +33,13 @@
             border: 7px solid transparent
             border-top: 7px solid $accent-color
     &__price-items
-        border-radius: .2em
+        box-shadow: 0 0 10px 0 rgba(76,70,84,1)
+        border-radius: .5em
         padding: 0
         list-style-type: none
-        border: 1px solid $accent-color
         border-bottom: none
-        background-color: $light-primary
+        color: $primary-text
+        background-color: $text-icons-color
         position: absolute
         margin-top: 2em
             

@@ -4,6 +4,7 @@ import {
   FETCH_BOOKS_FAILURE,
   BOOK_ADDED_TO_CART,
   BOOK_DELETED_FROM_CART,
+  BOOKS_DELETED_FROM_CART,
   FILTERED_BOOKS_PRICE,
 } from '../constants/action-types';
 
@@ -15,12 +16,12 @@ const initialState = {
   filterPriceType: 'default',
 };
 
-const createItem = (cartItem, book) => {
+const createItem = (cartItem, book, quantity) => {
   if (cartItem) {
     return {
       ...cartItem,
-      price: book.price + cartItem.price,
-      count: cartItem.count + 1,
+      price: quantity > 0 ? cartItem.price + book.price  : cartItem.price - book.price,
+      count: cartItem.count + quantity,
     };
   } else {
     return {
@@ -35,19 +36,25 @@ const createItem = (cartItem, book) => {
   }
 };
 
-const bookAdded = (itemIdx, items, item, book, state) => {
+const updateCartItems = (state, bookId, quantity) => {
+  const { books, cartItems } = state;
+
+  const book = books.find(({ id }) => id === bookId);
+  const itemIdx = cartItems.findIndex(({ id }) => id === bookId);
+  const cartItem = cartItems[itemIdx];
+
   if (itemIdx < 0) {
     return {
       ...state,
-      cartItems: [...items, createItem(item, book)],
+      cartItems: [...cartItems, createItem(cartItem, book, quantity)],
     };
   } else {
     return {
       ...state,
       cartItems: [
-        ...items.slice(0, itemIdx),
-        createItem(item, book),
-        ...items.slice(itemIdx + 1),
+        ...cartItems.slice(0, itemIdx),
+        createItem(cartItem, book, quantity),
+        ...cartItems.slice(itemIdx + 1),
       ],
     };
   }
@@ -75,16 +82,13 @@ export const reducer = (state = initialState, action) => {
         error: action.payload,
       };
     case BOOK_ADDED_TO_CART:
-      const bookId = action.payload;
-      const book = books.find(({ id }) => id === bookId);
-      const itemIdx = cartItems.findIndex(({ id }) => id === bookId);
-      const cartItem = cartItems[itemIdx];
-
-      return bookAdded(itemIdx, cartItems, cartItem, book, state);
-
+      return updateCartItems(state, action.payload, 1);
     case BOOK_DELETED_FROM_CART:
+      return updateCartItems(state, action.payload, -1);
+
+    case BOOKS_DELETED_FROM_CART:
       const removedBookId = action.payload;
-      const idx = books.findIndex(({ id }) => id === removedBookId);
+      const idx = cartItems.findIndex(({ id }) => id === removedBookId);
       return {
         ...state,
         cartItems: [...cartItems.slice(0, idx), ...cartItems.slice(idx + 1)],

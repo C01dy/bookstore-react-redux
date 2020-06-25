@@ -4,6 +4,7 @@ import {
   FETCH_BOOKS_FAILURE,
   BOOK_ADDED_TO_CART,
   BOOK_DELETED_FROM_CART,
+  BOOKS_DELETED_FROM_CART,
   FILTERED_BOOKS_PRICE,
 } from '../constants/action-types';
 
@@ -41,6 +42,13 @@ const bookDeletedFromCart = (bookId) => {
   };
 };
 
+const booksDeletedFromCart = (bookId) => {
+  return {
+    type: BOOKS_DELETED_FROM_CART,
+    payload: bookId,
+  };
+};
+
 const filteredBooksPrice = (sortType) => {
   return {
     type: FILTERED_BOOKS_PRICE,
@@ -54,5 +62,6 @@ export {
   fetchBooksFailure,
   bookAddedToCart,
   bookDeletedFromCart,
+  booksDeletedFromCart,
   filteredBooksPrice,
 };
