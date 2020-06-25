@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './navbar.sass';
 import { connect } from 'react-redux';
 import { filteredBooksPrice } from '../../actions';
+import PriceButton from '../price-button';
 
 const Navbar = ({ filteredBooksPrice }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
@@ -18,16 +19,35 @@ const Navbar = ({ filteredBooksPrice }) => {
     }
   };
 
-  const onFilterChange = (idx, name) => {
+  const filterChange = (idx, name) => {
     setActiveItem(idx);
     filteredBooksPrice(name);
-  }
+  };
 
   const priceItems = [
     { name: 'default', label: 'По умолчанию' },
     { name: 'ascending', label: 'Сначала дешевые' },
     { name: 'descending', label: 'Сначала дорогие' },
   ];
+
+  const renderPopup = () => {
+    if (visiblePopup) {
+      return (
+        <ul className="navbar__price-items">
+          {priceItems.map((props, idx) => (
+            <PriceButton
+              {...props}
+              idx={idx}
+              key={props.name + idx}
+              activeItem={activeItem}
+              onFilterChange={filterChange}
+            />
+          ))}
+        </ul>
+      );
+    }
+    return null;
+  };
 
   useEffect(() => {
     document.body.addEventListener('click', handleOutClick);
@@ -41,21 +61,7 @@ const Navbar = ({ filteredBooksPrice }) => {
             <span onClick={toggleVisiblePopup} className="navbar__price-btn">
               Сортировать
             </span>
-            {visiblePopup ? (
-              <ul className="navbar__price-items">
-                {priceItems.map(({ label, name }, idx) => (
-                  <li
-                    onClick={() => onFilterChange(idx, name)}
-                    key={name}
-                    className={`navbar__price-item ${
-                      activeItem === idx ? 'price-item-active' : ''
-                    }`}
-                  >
-                    {label}
-                  </li>
-                ))}
-              </ul>
-            ) : null}
+            {renderPopup()}
           </div>
         </div>
       </div>

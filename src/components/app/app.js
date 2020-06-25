@@ -2,7 +2,7 @@ import React from 'react';
 import './app.sass';
 import Header from '../header';
 import Navbar from '../navbar';
-import BooksPageContainer from '../books-page';
+import BooksPageContainer from '../../containers/books-page-container'
 
 function App() {
   return (

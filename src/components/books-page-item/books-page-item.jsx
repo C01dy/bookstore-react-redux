@@ -1,18 +1,14 @@
 import React from 'react';
 import './books-page-item.sass';
 import { connect } from 'react-redux';
-import {bookAddedToCart, bookDeletedFromCart} from '../../actions';
+import { bookAddedToCart } from '../../actions';
 
 const BooksPageItem = (props) => {
-  const { id ,coverImage, title, author, price } = props.book;
+  const { id, coverImage, title, author, price } = props.book;
 
-  const onBookAdded= () => {
-    return props.bookAddedToCart(id)
-  }
-
-  const onBookDeleted= () => {
-    return props.bookDeletedFromCart(id)
-  }
+  const onBookAdded = () => {
+    return props.bookAddedToCart(id);
+  };
 
   return (
     <div className="books-page__item">
@@ -24,7 +20,9 @@ const BooksPageItem = (props) => {
         </div>
         <div className="book-label-bottom">
           <div className="book-label-bottom__price">{price} руб.</div>
-          <button onClick={onBookAdded} className="book-label-bottom__btn">Купить</button>
+          <button onClick={onBookAdded} className="book-label-bottom__btn">
+            Купить
+          </button>
         </div>
       </div>
     </div>
@@ -33,7 +31,6 @@ const BooksPageItem = (props) => {
 
 const mapDispatchToProps = {
   bookAddedToCart,
-  bookDeletedFromCart
-}
+};
 
 export default connect(null, mapDispatchToProps)(BooksPageItem);
