@@ -3,6 +3,7 @@ import './navbar.sass';
 import { connect } from 'react-redux';
 import { filteredBooksPrice } from '../../actions';
 import PriceButton from '../price-button';
+import PropTypes from 'prop-types';
 
 const Navbar = ({ filteredBooksPrice }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
@@ -76,6 +77,11 @@ const Navbar = ({ filteredBooksPrice }) => {
     </div>
   );
 };
+
+Navbar.propTypes = {
+  books: PropTypes.array,
+  filteredBooksPrice: PropTypes.func,
+}
 
 const mapDispatchToProps = {
   filteredBooksPrice,

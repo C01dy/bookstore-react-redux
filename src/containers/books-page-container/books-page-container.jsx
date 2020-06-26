@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { bookstoreServiceContext } from '../../index';
 import BooksPage from '../../components/books-page/';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {
   fetchBooksRequest,
@@ -23,6 +24,16 @@ export const BooksPageContainer = (props) => {
 
   return <BooksPage {...props} />;
 };
+
+BooksPageContainer.propTypes = {
+  fetchBooksRequest: PropTypes.func,
+  fetchBooksSuccess: PropTypes.func,
+  fetchBooksFailure: PropTypes.func,
+  isLoading: PropTypes.bool,
+  error: PropTypes.object,
+  books: PropTypes.array,
+  filterPriceType: PropTypes.string,
+}
 
 const mapStateToProps = ({ isLoading, error, books, filterPriceType }) => {
   return {

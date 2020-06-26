@@ -1,6 +1,7 @@
 import React from 'react';
 import './cart.sass';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import {
   bookAddedToCart,
   bookDeletedFromCart,
@@ -74,6 +75,13 @@ const Cart = (props) => {
       ) : null}
     </>
   );
+};
+
+Cart.propTypes = {
+  cartItems: PropTypes.array,
+  bookAddedToCart: PropTypes.func,
+  bookDeletedFromCart: PropTypes.func,
+  booksDeletedFromCart: PropTypes.func,
 };
 
 const mapStateToProps = ({ cartItems }) => {

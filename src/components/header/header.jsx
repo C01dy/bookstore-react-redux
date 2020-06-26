@@ -2,6 +2,7 @@ import React from 'react';
 import './header.sass';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 const Header = ({ cartItems }) => {
 
@@ -30,6 +31,10 @@ const Header = ({ cartItems }) => {
     </div>
   );
 };
+
+Header.propTypes = {
+  cartItems: PropTypes.array,
+}
 
 const mapStateToProps = ({ cartItems }) => {
   return { cartItems };

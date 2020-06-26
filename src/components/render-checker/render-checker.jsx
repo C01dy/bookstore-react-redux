@@ -1,5 +1,6 @@
 import React from 'react';
 import LoadingIndicator from '../loading-indicator/loading-indicator';
+import PropTypes from 'prop-types';
 
 const RenderChecker = ({ isLoading, wasError, children }) => {
   if (isLoading) {
@@ -12,5 +13,11 @@ const RenderChecker = ({ isLoading, wasError, children }) => {
 
   return children;
 };
+
+RenderChecker.propTypes = {
+  isLoading: PropTypes.bool,
+  wasError: PropTypes.object,
+}
+
 
 export default RenderChecker;

@@ -3,6 +3,7 @@ import './books-page-item.sass';
 import { connect } from 'react-redux';
 import { bookAddedToCart } from '../../actions';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const BooksPageItem = (props) => {
   const { id, coverImage, title, author, price } = props.book;
@@ -38,6 +39,16 @@ const BooksPageItem = (props) => {
       </div>
     </div>
   );
+};
+
+BooksPageItem.propTypes = {
+  id: PropTypes.number,
+  coverImage: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  price: PropTypes.number,
+  bookAddedToCart: PropTypes.func,
+  cartItems: PropTypes.array
 };
 
 const mapStateToProps = ({ cartItems }) => {

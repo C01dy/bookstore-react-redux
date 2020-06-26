@@ -1,5 +1,6 @@
 import React from 'react';
 import './price-button.sass';
+import PropTypes from 'prop-types';
 
 const PriceButton = ({ name, label, idx, onFilterChange, activeItem }) => {
   return (
@@ -13,6 +14,14 @@ const PriceButton = ({ name, label, idx, onFilterChange, activeItem }) => {
       {label}
     </li>
   );
+};
+
+PriceButton.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  idx: PropTypes.number,
+  onFilterChange: PropTypes.func,
+  activeItem: PropTypes.number,
 };
 
 export default PriceButton;
