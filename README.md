@@ -14,6 +14,7 @@ Online bookstore with basic functionality :book:
 ### Also
 * Promises to simulate server requests
 * React-router
+* React prop-types
 
 ## Available Scripts
 In the project directory, you can run:
