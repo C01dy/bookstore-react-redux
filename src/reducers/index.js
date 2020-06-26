@@ -61,7 +61,7 @@ const updateCartItems = (state, bookId, quantity) => {
 };
 
 export const reducer = (state = initialState, action) => {
-  const { books, cartItems } = state;
+  const { cartItems } = state;
   switch (action.type) {
     case FETCH_BOOKS_REQUEST:
       return {

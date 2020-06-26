@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const Header = ({ cartItems }) => {
+
   const totalPrice = () => {
     if (cartItems.length) {
       return cartItems.map((item) => item.price).reduce((a, b) => a + b);
@@ -21,7 +22,7 @@ const Header = ({ cartItems }) => {
         </NavLink>
         <NavLink to="/cart">
           <div className="header__cart-link">
-            <span className="cart-total">{totalPrice()} <i class="fas fa-ruble-sign"></i></span>
+            <span className="cart-total">{totalPrice()} <i className="fas fa-ruble-sign"></i></span>
             <i className="fas fa-shopping-basket cart-icon"></i>
           </div>
         </NavLink>

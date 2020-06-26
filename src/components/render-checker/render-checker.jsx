@@ -1,8 +1,9 @@
 import React from 'react';
+import LoadingIndicator from '../loading-indicator/loading-indicator';
 
 const RenderChecker = ({ isLoading, wasError, children }) => {
   if (isLoading) {
-    return <h1>LOADING...</h1>;
+    return <LoadingIndicator/>;
   }
 
   if (wasError) {

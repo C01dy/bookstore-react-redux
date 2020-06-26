@@ -67,7 +67,7 @@ const Navbar = ({ filteredBooksPrice }) => {
         <div>
           <div ref={sortRef} className="navbar__price-input-group">
             <span onClick={toggleVisiblePopup} className="navbar__price-btn">
-              Сортировать <i class="fas fa-chevron-down popup-arrow" style={rotateArrow()}></i>
+              Сортировать <i className="fas fa-chevron-down popup-arrow" style={rotateArrow()}></i>
             </span>
             {renderPopup()}
           </div>

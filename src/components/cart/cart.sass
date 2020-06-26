@@ -33,18 +33,48 @@ $border-props: 3px solid $primary
     tr:nth-child(2n) 
         background: $light-primary
 
+
 .cart__btn
     cursor: pointer
 
 .cart__btn + .cart__btn
     margin: 0 .4em
 
+.cart-btns-wrap
+    max-width: 30px
+
 .inc-item-btn
     color: green
+    &:active
+        transform: scale(1.1)
 .dec-item-btn
     color: orange
+    &:active
+        transform: scale(1.1)
 .del-item-btn
     color: crimson
+    &:active
+        transform: scale(1.1)
+
+.cart-empty
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin: 0
+    height: 300px
+    border: 3px solid $primary
+    border-top: none
+    border-bottom-left-radius: 15px
+    border-bottom-right-radius: 15px
+    &-icon
+        color: $divider-color
+        font-size: 8em
+        opacity: .3
+    &-text
+        color: $secondary-text
+        font-family: $noto-font
+        font-size: 2em
 
 
 		
