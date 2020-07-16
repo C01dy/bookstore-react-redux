@@ -20,7 +20,5 @@ Online bookstore with basic functionality :book:
 In the project directory, you can run:
 ### `npm start`
 
-![alt text](public/2412538_detail.jpg "description")
-
 
 
