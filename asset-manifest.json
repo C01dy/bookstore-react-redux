@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bookstore-react-redux/static/css/main.a7c8e7e5.chunk.css",
-    "main.js": "/bookstore-react-redux/static/js/main.6051709e.chunk.js",
-    "main.js.map": "/bookstore-react-redux/static/js/main.6051709e.chunk.js.map",
+    "main.js": "/bookstore-react-redux/static/js/main.47060166.chunk.js",
+    "main.js.map": "/bookstore-react-redux/static/js/main.47060166.chunk.js.map",
     "runtime-main.js": "/bookstore-react-redux/static/js/runtime-main.6656b856.js",
     "runtime-main.js.map": "/bookstore-react-redux/static/js/runtime-main.6656b856.js.map",
     "static/js/2.91384ea1.chunk.js": "/bookstore-react-redux/static/js/2.91384ea1.chunk.js",
     "static/js/2.91384ea1.chunk.js.map": "/bookstore-react-redux/static/js/2.91384ea1.chunk.js.map",
     "index.html": "/bookstore-react-redux/index.html",
-    "precache-manifest.6ca7ccb3e8b24b2cabad7389e442b5d9.js": "/bookstore-react-redux/precache-manifest.6ca7ccb3e8b24b2cabad7389e442b5d9.js",
+    "precache-manifest.d4748969888d2620b513760a1218949b.js": "/bookstore-react-redux/precache-manifest.d4748969888d2620b513760a1218949b.js",
     "service-worker.js": "/bookstore-react-redux/service-worker.js",
     "static/css/main.a7c8e7e5.chunk.css.map": "/bookstore-react-redux/static/css/main.a7c8e7e5.chunk.css.map",
     "static/js/2.91384ea1.chunk.js.LICENSE.txt": "/bookstore-react-redux/static/js/2.91384ea1.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.6656b856.js",
     "static/js/2.91384ea1.chunk.js",
     "static/css/main.a7c8e7e5.chunk.css",
-    "static/js/main.6051709e.chunk.js"
+    "static/js/main.47060166.chunk.js"
   ]
 }
