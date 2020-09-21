@@ -1,16 +1,16 @@
-### About project
+### О проекте
 ***
-Example online bookstore with CRUD operations.
-### Used
+Пример простого магазина книг с реализацией корзины товаров и фильтрацией по категории.  Для имитации сервера был создан класс, в котором содержится массив с книгами, и функция возвразающая промис с задержкой, чтобы имитировать работу настоящего сервера. Для управления состоянием используется redux. В проекте есть типизация пропсов, реализованная при помощи библиотеки PropTypes. Для написания стилей я использовал препроцессор Sass.
+### Стек технологий
 ***
-* React + (react-router-dom, react-redux)
-* Redux + (redux-thunk)
-### How to start project?
+* React
+* React prop-types
+* Redux
+* Sass
+* punkapi.com
+### Как запустить проект?
 ***
-1. install packages ```npm install ```
-2. run the command ```npm start ```
-3. Wait for the browser tab to open. 
-If the tab does not open, enter http://localhost:3000/ in the address bar
-
+1. Установите npm, выполнив команду ```npm install ```
+2. Введите команду ```npm start``` для запуска приложения
 
 
